@@ -1,0 +1,21 @@
+#! order-service.yaml
+# Generated code, do not edit
+apiVersion: v1
+kind: Service
+metadata:
+    name: order-published
+    namespace: eproject-phase-1
+    labels:
+        com.docker.compose.project: eproject-phase-1
+        com.docker.compose.service: order
+spec:
+    selector:
+        com.docker.compose.project: eproject-phase-1
+        com.docker.compose.service: order
+    ports:
+        - name: order-3002
+          port: 3002
+          protocol: TCP
+          targetPort: order-3002
+
+# check if there is at least one published port

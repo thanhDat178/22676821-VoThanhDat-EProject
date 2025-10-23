@@ -1,0 +1,9 @@
+#! product-service.yaml
+# Generated code, do not edit
+apiVersion: v1
+kind: Service
+metadata:
+    name: product-published
+    namespace: eproject-phase-1
+spec:
+    type: LoadBalancer

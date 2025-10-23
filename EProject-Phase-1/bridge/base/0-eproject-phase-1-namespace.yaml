@@ -1,0 +1,8 @@
+#! 0-eproject-phase-1-namespace.yaml
+# Generated code, do not edit
+apiVersion: v1
+kind: Namespace
+metadata:
+    name: eproject-phase-1
+    labels:
+        com.docker.compose.project: eproject-phase-1

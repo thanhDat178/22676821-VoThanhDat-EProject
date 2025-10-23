@@ -1,0 +1,21 @@
+#! auth-service.yaml
+# Generated code, do not edit
+apiVersion: v1
+kind: Service
+metadata:
+    name: auth-published
+    namespace: eproject-phase-1
+    labels:
+        com.docker.compose.project: eproject-phase-1
+        com.docker.compose.service: auth
+spec:
+    selector:
+        com.docker.compose.project: eproject-phase-1
+        com.docker.compose.service: auth
+    ports:
+        - name: auth-3000
+          port: 3000
+          protocol: TCP
+          targetPort: auth-3000
+
+# check if there is at least one published port

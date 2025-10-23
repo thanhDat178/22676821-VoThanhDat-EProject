@@ -1,0 +1,41 @@
+#! order-deployment.yaml
+# Generated code, do not edit
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: order
+    namespace: eproject-phase-1
+    labels:
+        com.docker.compose.project: eproject-phase-1
+        com.docker.compose.service: order
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            com.docker.compose.project: eproject-phase-1
+            com.docker.compose.service: order
+    strategy:
+        type: Recreate
+    template:
+        metadata:
+            labels:
+                com.docker.compose.project: eproject-phase-1
+                com.docker.compose.service: order
+                com.docker.compose.network.default: "true"
+        spec:
+            containers:
+                - name: order-service
+                  image: eproject-phase-1-order
+                  imagePullPolicy: IfNotPresent
+                  env:
+                    - name: JWT_SECRET
+                      value: "mySuperSecretKey123"
+                    - name: MONGODB_AUTH_URI
+                      value: "mongodb://mongo:27017/authDB"
+                    - name: MONGODB_ORDER_URI
+                      value: "mongodb://mongo:27017/orderDB"
+                    - name: MONGODB_PRODUCT_URI
+                      value: "mongodb://mongo:27017/productDB"
+                  ports:
+                    - name: order-3002
+                      containerPort: 3002

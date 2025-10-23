@@ -13,5 +13,8 @@ RUN npm install
 # Copy toàn bộ code của service vào
 COPY . .
 
+# Mở port mà service sử dụng (rất quan trọng cho Docker Compose)
+EXPOSE 3001
+
 # Lệnh để khởi chạy ứng dụng (dựa theo script "start" trong package.json)
 CMD ["npm", "start"]

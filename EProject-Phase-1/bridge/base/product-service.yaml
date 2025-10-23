@@ -1,0 +1,19 @@
+#! product-service.yaml
+# Generated code, do not edit
+apiVersion: v1
+kind: Service
+metadata:
+    name: product-published
+    namespace: eproject-phase-1
+    labels:
+        com.docker.compose.project: eproject-phase-1
+        com.docker.compose.service: product
+spec:
+    selector:
+        com.docker.compose.project: eproject-phase-1
+        com.docker.compose.service: product
+    ports:
+        - name: product-3001
+          port: 3001
+          protocol: TCP
+          targetPort: product-3001
