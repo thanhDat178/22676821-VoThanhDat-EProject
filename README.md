@@ -44,7 +44,7 @@ ________________________________________
 Phần 4: Kiểm tra với Postman (Mục 3-7)
 Sau khi Docker khởi động xong, hãy mở Postman và thực hiện:
 A. Kiểm tra phần "live code":
-•	Tạo một request GET mới đến URL: http://localhost:8088/health
+•	Tạo một request GET mới đến URL: http://localhost:3000/health
 •	Nhấn Send. Kết quả trả về sẽ là { "status": "UP", "message": "API Gateway is running perfectly!" }.
 "Đây là API em vừa code, nó đã hoạt động ạ."
 B. Thực hiện kịch bản thi:
