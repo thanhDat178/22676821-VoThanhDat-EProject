@@ -11,12 +11,15 @@ Quản lý đơn hàng (Order): Xử lý việc tạo và theo dõi đơn hàng.
 Hệ thống được thiết kế với 4 dịch vụ độc lập và một cơ sở dữ liệu dùng chung, tuân theo các Mẫu thiết kế (Design Patterns) Microservices và API Gateway.
 2.1. Các Dịch vụ (Microservices)
 api-gateway	🌐 Cổng vào duy nhất (Single Entry Point), định tuyến các yêu cầu.	3000
+
 auth	🔑 Xử lý đăng ký, đăng nhập và xác thực người dùng.	3001
+
 product	📦 Quản lý thông tin, thêm/sửa/xóa sản phẩm.	3002
+
 order	🛒 Xử lý logic tạo và quản lý đơn hàng.	3003
+
 2.2. Giao tiếp giữa các Dịch vụ
 Bên ngoài (Client - User/Postman): Gửi yêu cầu đến api-gateway qua HTTP (Port 3000).
-
 Nội bộ (Inter-Service): api-gateway sử dụng Proxy để chuyển tiếp yêu cầu đến các dịch vụ nội bộ qua mạng ảo của Docker.
 Hướng dẫn Khởi chạy (Docker-Compose)
 Để khởi động toàn bộ hệ thống, bạn cần cài đặt Docker và Docker Compose.
