@@ -1,6 +1,9 @@
 E-Commerce Microservices Project
+
 Tác giả: Võ Thanh Đạt (VoThanhDat)
+
 Hệ thống Thương mại Điện tử Đơn giản được xây dựng theo Kiến trúc Microservices nhằm minh họa khả năng phân tách, mở rộng và quản lý các thành phần của ứng dụng một cách hiệu quả.
+
 1. 💡 Hệ thống giải quyết vấn đề gì?
 Đây là một hệ thống e-commerce cơ bản, cung cấp các chức năng cốt lõi sau:
 Quản lý người dùng (Authentication): Đăng ký và Đăng nhập.
