@@ -32,13 +32,18 @@ Bash
 
 docker-compose up --build
 (Lệnh này sẽ xây dựng (build) lại hình ảnh Docker cho api-gateway (để áp dụng các thay đổi live-code), sau đó khởi chạy 5 container: 4 services và 1 MongoDB).
-
 Truy cập hệ thống qua http://localhost:3000.
+
 4. Kịch bản Kiểm tra (Postman)
 Sử dụng Postman để kiểm tra các API sau (thay localhost:3000 bằng IP của Docker nếu cần)
 Bước	Phương thức	URL	Chức năng	Ghi chú
+
 0	GET	/health	Kiểm tra "sức khỏe" của Gateway	Live-Code Test
+
 1	POST	/auth/register	Đăng ký tài khoản mới	Body: username, password
+
 2	POST	/auth/login	Đăng nhập	Nhận về Access Token
+
 3	POST	/products	Thêm sản phẩm mới	Yêu cầu Token
+
 4	POST	/orders	Tạo đơn hàng mới	Yêu cầu Token và productId
