@@ -3,13 +3,11 @@ Tác giả: Võ Thanh Đạt (VoThanhDat)
 Hệ thống Thương mại Điện tử Đơn giản được xây dựng theo Kiến trúc Microservices nhằm minh họa khả năng phân tách, mở rộng và quản lý các thành phần của ứng dụng một cách hiệu quả.
 1. 💡 Hệ thống giải quyết vấn đề gì?
 Đây là một hệ thống e-commerce cơ bản, cung cấp các chức năng cốt lõi sau:
-
 Quản lý người dùng (Authentication): Đăng ký và Đăng nhập.
-
 Quản lý sản phẩm (Product): Xem và lưu trữ thông tin sản phẩm.
-
 Quản lý đơn hàng (Order): Xử lý việc tạo và theo dõi đơn hàng.
-2. 🧱 Kiến trúc Hệ thống (Microservices)
+
+🧱 Kiến trúc Hệ thống (Microservices)
 Hệ thống được thiết kế với 4 dịch vụ độc lập và một cơ sở dữ liệu dùng chung, tuân theo các Mẫu thiết kế (Design Patterns) Microservices và API Gateway.
 2.1. Các Dịch vụ (Microservices)
 api-gateway	🌐 Cổng vào duy nhất (Single Entry Point), định tuyến các yêu cầu.	3000
